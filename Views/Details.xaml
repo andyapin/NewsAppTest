@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.Details"
+             Title="Details">
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <VerticalStackLayout Spacing="20">
+            <Label Text="News Detail" FontSize="24" FontAttributes="Bold" />
+            <VerticalStackLayout>
+                <Label Text="PublishedAt" />
+                <Label Text="{Binding PublishedAt}" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Author" />
+                <Label Text="{Binding Author}" />
+            </VerticalStackLayout>
+            <Border HeightRequest="200">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <Image Source="{Binding UrlToImage}" Aspect="Fill" HorizontalOptions="Center" />
+            </Border>
+            <VerticalStackLayout>
+                <Label Text="Title" />
+                <Label Text="{Binding Title}" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Description" />
+                <Label Text="{Binding Description}" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Content" />
+                <Label Text="{Binding Content}" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Url" />
+                <Label Text="{Binding Url}" />
+                <Button Text="GoTo URL" Clicked="Button_Clicked" CornerRadius="20" HeightRequest="70" Margin="0,20,0,50" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
